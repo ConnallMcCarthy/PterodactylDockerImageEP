@@ -12,7 +12,7 @@ then
     fi
 fi
 
-if [ ! -z "$ADD_PACKAGES" ] 
+if [[ "$ADD_PACKAGES" == 1 ]]
 then 
     ./SteamWorkshopDownloader.linux-x64 btsetconfigplayer --modfolder LocalMods --configplayerfile config_player.xml
 fi 
