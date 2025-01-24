@@ -16,3 +16,8 @@ if [[ "$ADD_PACKAGES" == 1 ]]
 then 
     ./SteamWorkshopDownloader.linux-x64 btsetconfigplayer --modfolder LocalMods --configplayerfile config_player.xml
 fi 
+
+if [ ! -z "$ADD_PACKAGES_COLLECTION" ] 
+then 
+    ./SteamWorkshopDownloader.linux-x64 btsetconfigplayer --collection $COLLECTION --configplayerfile config_player.xml
+fi 
