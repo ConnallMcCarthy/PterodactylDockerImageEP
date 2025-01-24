@@ -19,5 +19,5 @@ fi
 
 if [ ! -z "$ADD_PACKAGES_COLLECTION" ] 
 then 
-    ./SteamWorkshopDownloader.linux-x64 btsetconfigplayer --collection $COLLECTION --configplayerfile config_player.xml
+    ./SteamWorkshopDownloader.linux-x64 btsetconfigfromcollection --collection $COLLECTION --configplayerfile config_player.xml
 fi 
