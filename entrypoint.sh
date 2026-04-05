@@ -58,7 +58,7 @@ else
 fi
 
 echo "Downloading latest version of LuaCsForBarotrauma"
-wget -N  -q --show-progress https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/latest/luacsforbarotrauma_patch_linux_server.zip -O luacsforbarotrauma_patch_linux_server.zip
+wget -N  -q --show-progress https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/nightly/luacsforbarotrauma_patch_linux_server.zip -O luacsforbarotrauma_patch_linux_server.zip
 unzip -qo luacsforbarotrauma_patch_linux_server.zip
 
 pterodactylfix=" LuaUserData.RegisterType('System.Console')
@@ -76,7 +76,7 @@ Hook.Add('think', 'ConsoleInput', function()
                 Game.ExecuteCommand(Console.ReadLine())
     end
 end)"
-echo "$pterodactylfix" >> Lua/ModLoader.lua
+echo "$pterodactylfix" >> LocalMods/LuaCsForBarotrauma/Lua/LuaSetup.lua
 
 echo "Downloading SteamWorkshopDownloader"
 wget -N -q --show-progress https://github.com/evilfactory/SteamWorkshopDownloader/releases/download/latest/SteamWorkshopDownloader.linux-x64 -O SteamWorkshopDownloader.linux-x64
