@@ -58,7 +58,7 @@ else
 fi
 
 echo "Downloading latest version of LuaCsForBarotrauma"
-wget -N  -q --show-progress https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/nightly/luacsforbarotrauma_patch_linux_server.zip -O luacsforbarotrauma_patch_linux_server.zip
+wget -N  -q --show-progress https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/latest/luacsforbarotrauma_patch_linux_server.zip -O luacsforbarotrauma_patch_linux_server.zip
 unzip -qo luacsforbarotrauma_patch_linux_server.zip
 
 pterodactylfix=" LuaUserData.RegisterType('System.Console')
