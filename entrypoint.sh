@@ -76,7 +76,9 @@ Hook.Add('think', 'ConsoleInput', function()
                 Game.ExecuteCommand(Console.ReadLine())
     end
 end)"
-echo "$pterodactylfix" >> LocalMods/LuaCsForBarotrauma/Lua/LuaSetup.lua
+
+[ -f "LocalMods/LuaCsForBarotrauma/Lua/LuaSetup.lua" ] && echo "$pterodactylfix" >> LocalMods/LuaCsForBarotrauma/Lua/LuaSetup.lua
+[ -f "LocalMods/2559634234/Lua/LuaSetup.lua" ] && echo "$pterodactylfix" >> LocalMods/2559634234/Lua/LuaSetup.lua
 
 echo "Downloading SteamWorkshopDownloader"
 wget -N -q --show-progress https://github.com/evilfactory/SteamWorkshopDownloader/releases/download/latest/SteamWorkshopDownloader.linux-x64 -O SteamWorkshopDownloader.linux-x64
