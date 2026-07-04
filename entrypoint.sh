@@ -94,7 +94,7 @@ chmod +x custom_script.sh
 
 
 # Replace Startup Variables
-MODIFIED_STARTUP=$(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
+MODIFIED_STARTUP=$(echo ${STARTUP} | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g")
 # echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
