@@ -10,7 +10,7 @@
     "description": "Barotrauma is a 2D co-op survival horror submarine simulator, inspired by games like FTL: Faster Than Light, Rimworld, Dwarf Fortress and Space Station 13. It\u00e2\u20ac\u2122s a Sci-Fi game that combines ragdoll physics and alien sea monsters with teamwork and existential fear.",
     "features": null,
     "docker_images": {
-        "ghcr.io\/evilfactory\/btpterodactyldockerimage:master": "ghcr.io\/evilfactory\/btpterodactyldockerimage:master"
+        "ghcr.io\/connallmccarthy\/pterodactyldockerimageep:latest": "ghcr.io\/connallmccarthy\/pterodactyldockerimageep:latest"
     },
     "file_denylist": [],
     "startup": "bash run.sh && export LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH:$PWD\/linux64\" && port={{SERVER_PORT}} && .\/DedicatedServer -port $port -queryport $(( $port + 1 ))",
