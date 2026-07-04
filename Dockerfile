@@ -14,9 +14,9 @@ RUN         dpkg --add-architecture i386 \
 			&& apt -y install lib32tinfo6 lib32stdc++6 lib32z1 libtbb2 libtinfo5 libstdc++6 readline-common libncursesw5 libfontconfig1 libnss-wrapper gettext-base libc++-dev libc6-i386 libcurl4 libc6 libc6:i386 libssl3 libssl3:i386 libc6 libc6:i386 xvfb libxml2-utils
 
 RUN			apt-get install -y locales locales-all
-ENV			LC_ALL en_US.UTF-8
-ENV			LANG en_US.UTF-8
-ENV			LANGUAGE en_US.UTF-8
+ENV			LC_ALL=en_US.UTF-8
+ENV			LANG=en_US.UTF-8
+ENV			LANGUAGE=en_US.UTF-8
 
 RUN 		useradd -d /home/container -m container
 
