@@ -57,9 +57,9 @@ else
     echo -e "Not updating game server as auto update was set to 0. Starting Server"
 fi
 
-echo "Downloading latest version of LuaCsForBarotrauma"
-wget -N  -q --show-progress https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/latest/luacsforbarotrauma_patch_linux_server.zip -O luacsforbarotrauma_patch_linux_server.zip
-unzip -qo luacsforbarotrauma_patch_linux_server.zip
+echo "Downloading latest version of LuaCsForBarotraumaEP"
+wget -N  -q --show-progress https://github.com/NotAlwaysTrue/LuaCsForBarotraumaEP/releases/download/latest/luacsforbarotraumaEP_patch_linux_server.zip -O luacsforbarotraumaEP_patch_linux_server.zip
+unzip -qo luacsforbarotraumaEP_patch_linux_server.zip
 
 pterodactylfix=" LuaUserData.RegisterType('System.Console')
 local Console = LuaUserData.CreateStatic('System.Console')
@@ -77,7 +77,7 @@ Hook.Add('think', 'ConsoleInput', function()
     end
 end)"
 
-[ -f "LocalMods/LuaCsForBarotrauma/Lua/LuaSetup.lua" ] && echo "$pterodactylfix" >> LocalMods/LuaCsForBarotrauma/Lua/LuaSetup.lua
+[ -f "LocalMods/LuaCsForBarotraumaEP/Lua/LuaSetup.lua" ] && echo "$pterodactylfix" >> LocalMods/LuaCsForBarotraumaEP/Lua/LuaSetup.lua
 [ -f "LocalMods/2559634234/Lua/LuaSetup.lua" ] && echo "$pterodactylfix" >> LocalMods/2559634234/Lua/LuaSetup.lua
 
 echo "Downloading SteamWorkshopDownloader"
@@ -85,11 +85,13 @@ wget -N -q --show-progress https://github.com/evilfactory/SteamWorkshopDownloade
 chmod +x SteamWorkshopDownloader.linux-x64
 
 echo "Downloading run.sh"
-wget -N -q --show-progress https://raw.githubusercontent.com/evilfactory/BTPterodactylDockerImage/refs/heads/master/run.sh -O run.sh
+wget -N -q --show-progress https://raw.githubusercontent.com/ConnallMcCarthy/PterodactylDockerImageEP/refs/heads/master/run.sh -O run.sh
 chmod +x run.sh
 
 touch custom_script.sh
 chmod +x custom_script.sh
+
+
 
 # Replace Startup Variables
 MODIFIED_STARTUP=$(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
